@@ -5,10 +5,14 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 import router from './router'
 import { Header } from 'mint-ui';
-import './lib/mui/css/mui.min.css'
+import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
+import './lib/mui/fonts/mui-icons-extra.ttf'
+import VueResource from 'vue-resource'
+
+Vue.use(VueResource)
 
 Vue.component(Header.name, Header);
-Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
