@@ -27,7 +27,6 @@
 		</nav>
 		<transition>
     	<router-view></router-view>
-		
 		</transition>
 
   </div>
@@ -42,6 +41,7 @@
 .app-container {
 	// 只能x轴的方向,不然Y轴的方向就没有滚动条了
 	// padding-top: 40px;
+	padding-bottom: 50px;
 	overflow-x: hidden;
 	
 }

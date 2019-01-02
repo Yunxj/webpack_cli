@@ -11,38 +11,39 @@
     </mt-swipe>
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <routerLink to="#">
-            <img src="../../images/menu1(1).png" alt="">
+        <!-- 加home为了高亮 -->
+        <routerLink to="/home/newsList">
+            <img src="../../assets/images/menu1(1).png" alt="">
           <div class="mui-media-body">新闻资讯</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <routerLink to="#">
-            <img src="../../images/menu2.png" alt="">
+            <img src="../../assets/images/menu2.png" alt="">
           <div class="mui-media-body">图片分享</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <routerLink to="#">
-            <img src="../../images/menu3.png" alt="">
+            <img src="../../assets/images/menu3.png" alt="">
           <div class="mui-media-body">商品购买</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <routerLink to="#">
-            <img src="../../images/menu4.png" alt="">
+            <img src="../../assets/images/menu4.png" alt="">
           <div class="mui-media-body">留言反馈</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <routerLink to="#">
-            <img src="../../images/menu5.png" alt="">
+            <img src="../../assets/images/menu5.png" alt="">
           <div class="mui-media-body">视频专区</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <routerLink to="#">
-            <img src="../../images/menu6.png" alt="">
+            <img src="../../assets/images/menu6.png" alt="">
           <div class="mui-media-body">联系我们</div>
         </routerLink>
       </li>
@@ -65,7 +66,7 @@ export default {
   },
   methods: {
     getSwipe() {
-      this.$http.get("http://www.lovegf.cn:8899/api/getlunbo").then(result => {
+      this.$http.get("api/getlunbo").then(result => {
         // console.log(result);
         if (result.body.status === 0) {
           this.swipeList = result.body.message
@@ -80,6 +81,8 @@ export default {
 </script>
 
 <style lang="less" >
+/* 会被编译到css中*/
+// 不会编译到css中
 .mint-swipe {
   height: 200px;
   img {
