@@ -16,7 +16,7 @@ export default {
     .member-container {
         h1 {
             background-color: pink;
-            width: 200p;
+            width: 200px;
             height: 200px;
         }
     }

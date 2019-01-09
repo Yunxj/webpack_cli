@@ -8,7 +8,7 @@
         <hr>
 
         <div class="content" v-html="newsInfo.content"></div>
-        <comment></comment>
+        <comment :id="this.id"></comment>
     </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
     methods:{
         getNewsInfo() {
             this.$http.get('api/getnew/'+ this.id).then(result => {
-                    console.log(result)
+                    // console.log(result)
                 if(result.body.status == 0){
                     this.newsInfo = result.body.message[0]
                     // console.log(this.newsInfo)

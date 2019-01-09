@@ -33,7 +33,7 @@ export default {
     methods:{
         getNewList() {
             this.$http.get('api/getnewslist').then(result => {
-                    console.log(result)
+                    // console.log(result)
                 if(result.body.status == 0){
                     this.newList = result.body.message
                     // console.log(this.newList);

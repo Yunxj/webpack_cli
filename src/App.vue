@@ -16,7 +16,7 @@
 				<span class="mui-tab-label">会员</span>
 			</routerLink>
 			<routerLink class="mui-tab-item" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
+				<span id="badge" class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{$store.getters.getAllCount}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</routerLink>
 
@@ -25,7 +25,7 @@
 				<span class="mui-tab-label">搜索</span>
 			</routerLink>
 		</nav>
-		<transition>
+		<transition name="app">
     	<router-view></router-view>
 		</transition>
 
@@ -46,18 +46,18 @@
 	
 }
 
-.v-enter {
+.app-enter {
 	opacity: 0;
 	transform: translateX(100%);
 	position: absolute;
 	
 }
-.v-leave-to {
+.app-leave-to {
 	opacity: 0;
 	transform: translateX(-100%)
 }
-.v-enter-active, 
-.v-leave-avtive {
+.app-enter-active, 
+.app-leave-avtive {
 	transition: all .5s ease;
 }
 

@@ -18,13 +18,13 @@
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <routerLink to="#">
+        <routerLink to="/home/picture">
             <img src="../../assets/images/menu2.png" alt="">
           <div class="mui-media-body">图片分享</div>
         </routerLink>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <routerLink to="#">
+        <routerLink to="/home/goodsList">
             <img src="../../assets/images/menu3.png" alt="">
           <div class="mui-media-body">商品购买</div>
         </routerLink>
@@ -49,6 +49,8 @@
       </li>
 
     </ul>
+    <!-- 哈哈 可以获取到 -->
+    <!-- <p>{{$store.state.msg}}</p>  -->
   </div>
 </template>
 

@@ -9,7 +9,20 @@ import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
 import comment from './components/common/comment.vue'
 import VueResource from 'vue-resource'
- Vue.use(MintUI)
+import LyTab from 'ly-tab'
+import { Lazyload } from 'mint-ui'
+import VuePreview from 'vue2-preview'
+import store from './store'
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
+
+Vue.use(VuePreview)
+Vue.use(LyTab)
+Vue.use(MintUI)
+Vue.use(Lazyload)
+
 
 Vue.use(VueResource)
 
@@ -27,12 +40,14 @@ Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 Vue.http.options.emulateJSON = true
 Vue.component(Header.name, Header)
 //定义全局过滤器 = 默认值
+
 new Vue({
   el: '#app',
   data: {
 
   },
   router,
+  store, //store挂载到vue实例中
   render: h => h(App),
 
 })
