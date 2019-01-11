@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="app-container">
     <mt-header title="媒体资讯">
-      <router-link to="/" slot="left">
+      <span v-show="$route.path != '/home'"  @click="$router.go(-1)"  slot="left">
        <mt-button icon="back">返回</mt-button>
-      </router-link>
+      </span>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
     <nav class="mui-bar mui-bar-tab">

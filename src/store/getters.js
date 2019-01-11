@@ -32,12 +32,15 @@ export default {
       getGoodsCountAndAmount(state) {
         var o = {
           count: 0, // 勾选的数量
-          amount: 0 // 勾选的总价
+          amount: 0, // 勾选的总价
+          // selected: null
         }
         state.car.forEach(item => {
           if (item.selected) {
             o.count += item.count
             o.amount += item.price * item.count
+            // o.selected = item.selected
+
           }
         })
         return o

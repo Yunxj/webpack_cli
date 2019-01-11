@@ -103,7 +103,7 @@ export default {
     addToShopCar() {
       // 添加到购物车
       this.ballFlag = !this.ballFlag;
-    //   vuex的使用
+      //   vuex的使用
       // { id:商品的id, count: 要购买的数量, price: 商品的单价，selected: false  }
       // 拼接出一个，要保存到 store 中 car 数组里的 商品信息对象
       var goodsInfo = {
@@ -120,7 +120,7 @@ export default {
     },
     enter(el, done) {
       el.offsetHeight;
-    //   console.log(this);
+      //   console.log(this);
 
       const ballPosition = this.$refs.ball.getBoundingClientRect();
       // 获取 徽标 在页面中的位置
@@ -128,8 +128,12 @@ export default {
         .getElementById("badge")
         .getBoundingClientRect(); //获取全局购物车的坐标位置
 
+      // console.log(ballPosition);
+      // {x: 120, y: 120, width: 15, height: 15, top: 120,width:15,bottom:135,height:15}
+      
       const xDist = badgePosition.left - ballPosition.left;
       const yDist = badgePosition.top - ballPosition.top;
+      
 
         // console.log(xDist, yDist);
       el.style.transform = `translate(${xDist}px, ${yDist}px)`;

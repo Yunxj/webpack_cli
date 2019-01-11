@@ -1,6 +1,6 @@
 export default {
     addToCar(state, goodsInfo) {
-      console.log(goodsInfo)
+      // console.log(goodsInfo) //{id: "88", count: 1, price: 5780, selected: true}
 
       //如果有加上,没有push到car, 没有返回值mutations
       let flag = false //假设没有找到
@@ -38,8 +38,8 @@ export default {
       localStorage.setItem('car',JSON.stringify(state.car))
     },
     updateSelectedGoods(state,id) {
-      state.car.some((item, i) => {
-        if(item.id == id) {
+      state.car.some(item => {
+        if(item.id == id.id) {
           item.selected = id.selected
           return true 
         }
