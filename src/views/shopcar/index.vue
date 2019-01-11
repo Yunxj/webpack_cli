@@ -44,7 +44,7 @@
 					<div class="mui-card-content-inner jiesuan">
 						<div class="left">
               <p>总计（不含运费）</p>
-              <p>已勾选商品 <span class="red">{{ $store.getters.getGoodsCountAndAmount.count }} {{$store.getters.getGoodsCountAndAmount.selected }}</span> 件， 总价 <span class="red">￥{{ $store.getters.getGoodsCountAndAmount.amount }}</span></p>
+              <p>已勾选商品 <span class="red">{{ $store.getters.getGoodsCountAndAmount.count }}</span> 件， 总价 <span class="red">￥{{ $store.getters.getGoodsCountAndAmount.amount }}</span></p>
             </div>
              <mt-button type="danger">去结算</mt-button>
 					</div>
@@ -110,7 +110,7 @@ export default {
     },
     selectedChanged(id, value){
       this.$store.commit("updateSelectedGoods", {id, selected: value} )
-      console.log(id,value) //88 true
+      // console.log(id,value) //88 true
     },
     onSubmit() {
 

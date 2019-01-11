@@ -36,6 +36,7 @@ export default {
           // selected: null
         }
         state.car.forEach(item => {
+          //如果item.selected的状态是true就计算, 并返回有计算好的价格, 否则反之
           if (item.selected) {
             o.count += item.count
             o.amount += item.price * item.count
